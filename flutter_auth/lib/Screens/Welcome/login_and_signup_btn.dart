@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/Screens/Login/login_screen.dart';
 import 'package:flutter_auth/constants.dart';
 
 class LoginAndSignupBtn extends StatelessWidget {
@@ -11,7 +12,10 @@ class LoginAndSignupBtn extends StatelessWidget {
     return Column(
       children: [
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const LoginScreen()));
+          },
           style: const ButtonStyle(
             foregroundColor: MaterialStatePropertyAll<Color>(Colors.white),
             backgroundColor: MaterialStatePropertyAll<Color>(Color(0xFF6F35A5)),
