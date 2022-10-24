@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Login/components/already_have_an_account_acheck.dart';
-import 'package:flutter_auth/Screens/Signup/signup_screen.dart';
+import 'package:flutter_auth/Screens/Login/login_screen.dart';
 import 'package:flutter_auth/constants.dart';
 
-class LoginForm extends StatelessWidget {
-  const LoginForm({super.key});
+class SignUpForm extends StatelessWidget {
+  const SignUpForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class LoginForm extends StatelessWidget {
           keyboardType: TextInputType.emailAddress,
           textInputAction: TextInputAction.next,
           cursorColor: kPrimaryColor,
-          onSaved: (newValue) {},
+          onSaved: (email) {},
           decoration: const InputDecoration(
             hintText: "Your email",
             prefixIcon: Padding(
@@ -28,7 +28,7 @@ class LoginForm extends StatelessWidget {
           child: TextFormField(
             textInputAction: TextInputAction.done,
             obscureText: true,
-            onSaved: (newValue) {},
+            cursorColor: kPrimaryColor,
             decoration: const InputDecoration(
               hintText: "Your password",
               prefixIcon: Padding(
@@ -38,16 +38,19 @@ class LoginForm extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: defaultPadding),
+        const SizedBox(height: defaultPadding / 2),
         ElevatedButton(
           onPressed: () {},
-          child: const Text("LOGIN"),
+          child: const Text("SIGN UP"),
         ),
         const SizedBox(height: defaultPadding),
-        AlreadyHaveAnAccountCheck(press: () {
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const SignUpScreen()));
-        }),
+        AlreadyHaveAnAccountCheck(
+          login: false,
+          press: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const LoginScreen()));
+          },
+        ),
       ],
     );
   }
