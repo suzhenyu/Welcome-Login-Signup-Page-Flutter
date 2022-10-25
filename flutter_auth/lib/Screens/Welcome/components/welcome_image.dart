@@ -25,7 +25,8 @@ class WelcomeImage extends StatelessWidget {
             ),
             const Spacer(),
           ],
-        )
+        ),
+        const SizedBox(height: defaultPadding * 2),
       ],
     );
   }

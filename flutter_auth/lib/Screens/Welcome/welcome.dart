@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_auth/Screens/Welcome/login_and_signup_btn.dart';
-import 'package:flutter_auth/Screens/Welcome/welcome_image.dart';
+import 'package:flutter_auth/Screens/Welcome/components/login_signup_btn.dart';
+import 'package:flutter_auth/Screens/Welcome/components/welcome_image.dart';
 import 'package:flutter_auth/components/background.dart';
 import 'package:flutter_auth/responsive.dart';
 

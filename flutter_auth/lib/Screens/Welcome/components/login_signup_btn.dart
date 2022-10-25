@@ -12,17 +12,16 @@ class LoginAndSignupBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ElevatedButton(
-          onPressed: () {
-            Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const LoginScreen()));
-          },
-          style: const ButtonStyle(
-            foregroundColor: MaterialStatePropertyAll<Color>(Colors.white),
-            backgroundColor: MaterialStatePropertyAll<Color>(Color(0xFF6F35A5)),
-          ),
-          child: Text(
-            "Login".toUpperCase(),
+        Hero(
+          tag: "login_btn",
+          child: ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const LoginScreen()));
+            },
+            child: const Text(
+              "LOGIN",
+            ),
           ),
         ),
         const SizedBox(height: 16),

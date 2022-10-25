@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Signup/components/signup_form.dart';
 import 'package:flutter_auth/Screens/Signup/components/signup_screen_top_image.dart';
 import 'package:flutter_auth/components/background.dart';
-import 'package:flutter_auth/constants.dart';
 import 'package:flutter_auth/responsive.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -27,6 +26,7 @@ class MobileSignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const SignUpScreenTopImage(),
         Row(
